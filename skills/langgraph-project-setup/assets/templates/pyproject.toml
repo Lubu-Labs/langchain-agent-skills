@@ -1,0 +1,36 @@
+[project]
+name = "my-langgraph-agent"
+version = "0.1.0"
+description = "LangGraph agent application"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=1.1.0",
+    "langchain-core>=1.1.0",
+    "langchain>=1.1.0",
+]
+
+[project.optional-dependencies]
+# LLM Providers (install the ones you need)
+openai = ["langchain-openai>=1.1.0"]
+anthropic = ["langchain-anthropic>=1.1.0"]
+google = ["langchain-google-genai>=4.0.0"]
+aws = ["langchain-aws>=1.0.0"]
+
+# Development tools
+dev = [
+    "langgraph-cli[inmem]>=0.4.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+# All providers
+all = [
+    "langchain-openai>=1.1.0",
+    "langchain-anthropic>=1.1.0",
+    "langchain-google-genai>=4.0.0",
+    "langchain-aws>=0.2.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

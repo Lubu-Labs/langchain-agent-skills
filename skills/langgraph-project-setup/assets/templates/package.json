@@ -1,0 +1,26 @@
+{
+  "name": "my-langgraph-agent",
+  "version": "0.1.0",
+  "description": "LangGraph agent application",
+  "type": "module",
+  "main": "src/agent.js",
+  "scripts": {
+    "dev": "langgraph dev",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "^0.2.0",
+    "@langchain/core": "^0.3.0",
+    "langchain": "^0.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "optionalDependencies": {
+    "@langchain/openai": "^0.3.0",
+    "@langchain/anthropic": "^0.3.0",
+    "@langchain/google-genai": "^0.1.0"
+  }
+}
