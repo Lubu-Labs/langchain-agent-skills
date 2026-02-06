@@ -1,70 +1,38 @@
 {
-    "name": "lubulabs-langchain-agent-skills",
-    "owner": {
-        "name": "Lubu Labs",
-        "email": "simon.budziak@lubulabs.com",
-        "url": "https://www.lubulabs.com/"
+  "name": "lubulabs-langchain-agent-skills",
+  "owner": {
+    "name": "Lubu Labs",
+    "email": "simon.budziak@lubulabs.com",
+    "url": "https://www.lubulabs.com/"
+  },
+  "metadata": {
+    "description": "Agent-optimized LangChain, LangGraph and LangSmith skills for AI coding assistants by Lubu Labs",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "langgraph-skills",
+      "description": "Collection of LangGraph development skills including project setup, agent patterns, state management, and error handling",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/skill-creator",
+        "./skills/langgraph-project-setup",
+        "./skills/langgraph-agent-patterns",
+        "./skills/langgraph-state-management",
+        "./skills/langgraph-error-handling"
+      ]
     },
-    "metadata": {
-        "description": "Agent-optimized LangChain, LangGraph and LangSmith skills for AI coding assistants by Lubu Labs",
-        "version": "1.0.0"
-    },
-    "plugins": [
-        {
-            "name": "skill-creator",
-            "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
-            "source": "./",
-            "skills": [
-                "./skills/skill-creator"
-            ]
-        },
-        {
-            "name": "langgraph-project-setup",
-            "description": "Initialize and configure LangGraph projects with proper structure, langgraph.json configuration, environment variables, and dependency management. Use when users want to (1) create a new LangGraph project, (2) set up langgraph.json for deployment, (3) configure environment variables for LLM providers, (4) initialize project structure for agents, (5) set up local development with LangGraph Studio, (6) configure dependencies (pyproject.toml, requirements.txt, package.json), or (7) troubleshoot project configuration issues.",
-            "source": "./",
-            "skills": [
-                "./skills/langgraph-project-setup"
-            ]
-        },
-        {
-            "name": "langgraph-agent-patterns",
-            "description": "Implement multi-agent coordination patterns (supervisor-subagent, router, orchestrator-worker, handoffs) for LangGraph applications. Use when users want to (1) implement multi-agent systems, (2) coordinate multiple specialized agents, (3) choose between coordination patterns, (4) set up supervisor-subagent workflows, (5) implement router-based agent selection, (6) create parallel orchestrator-worker patterns, (7) implement agent handoffs, (8) design state schemas for multi-agent systems, or (9) debug multi-agent coordination issues.",
-            "source": "./",
-            "skills": [
-                "./skills/langgraph-agent-patterns"
-            ]
-        },
-        {
-            "name": "langgraph-state-management",
-            "description": "Design state schemas, implement reducers, configure persistence, and debug state issues for LangGraph applications. Use when users want to (1) design or define state schemas for LangGraph graphs, (2) implement reducer functions for state accumulation, (3) configure persistence with checkpointers (InMemorySaver/MemorySaver, SqliteSaver, PostgresSaver), (4) debug state update issues or unexpected state behavior, (5) migrate state schemas between versions, (6) validate state schema structure, (7) choose between TypedDict and MessagesState patterns, (8) implement custom reducers for lists, dicts, or sets, (9) use the Overwrite type to bypass reducers, (10) set up thread-based persistence for multi-turn conversations, or (11) inspect checkpoints for debugging.",
-            "source": "./",
-            "skills": [
-                "./skills/langgraph-state-management"
-            ]
-        },
-        {
-            "name": "langgraph-error-handling",
-            "description": "Implement LangGraph error handling with current v1 patterns. Use when users need to classify failures, add RetryPolicy for transient issues, build LLM recovery loops with Command routing, add human-in-the-loop with interrupt()/resume, handle ToolNode errors, or choose a safe strategy between retry, recovery, and escalation.",
-            "source": "./",
-            "skills": [
-                "./skills/langgraph-error-handling"
-            ]
-        },
-        {
-            "name": "langsmith-trace-analyzer",
-            "description": "Fetch, organize, and analyze LangSmith traces for debugging, evaluation, and performance optimization. Use when Claude needs to: (1) Download traces from LangSmith projects by ID, metadata, status, or time range, (2) Analyze trace patterns (message counts, token usage, tool calls, errors), (3) Compare passed vs failed traces or agent versions, (4) Categorize failures for benchmarks like Terminal Bench, (5) Generate analysis reports and insights, (6) Filter runs using LangSmith SDK queries, (7) Organize traces by outcome for systematic analysis, or (8) Debug production issues using trace data.",
-            "source": "./",
-            "skills": [
-                "./skills/langsmith-trace-analyzer"
-            ]
-        },
-        {
-            "name": "langsmith-deployment",
-            "description": "Deploy, monitor, and manage LangGraph applications in production using LangSmith Cloud, Hybrid, or Standalone infrastructure. Use when Claude needs to: (1) Deploy LangGraph agents to production, (2) Set up deployment configuration (langgraph.json, environment variables, GitHub integration), (3) Choose between Cloud/Hybrid/Standalone deployment options, (4) Configure monitoring and alerts for deployed agents, (5) Manage deployment revisions and rollbacks, (6) Set up CI/CD pipelines for automated deployment, (7) Troubleshoot deployment issues, (8) Scale deployments for production workloads, or (9) Configure secrets and environment management for different environments.",
-            "source": "./",
-            "skills": [
-                "./skills/langsmith-deployment"
-            ]
-        }
-    ]
+    {
+      "name": "langsmith-skills",
+      "description": "Collection of LangSmith skills for trace analysis, deployment, and production operations",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/skill-creator",
+        "./skills/langsmith-trace-analyzer",
+        "./skills/langsmith-deployment"
+      ]
+    }
+  ]
 }
