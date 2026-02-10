@@ -12,7 +12,7 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 | [langgraph-agent-patterns](./skills/langgraph-agent-patterns/) | Multi-agent coordination patterns: supervisor, router, orchestrator-worker, handoffs. |
 | [langgraph-state-management](./skills/langgraph-state-management/) | State schemas, reducers, persistence, checkpoint inspection, and migration workflows. |
 | [langgraph-error-handling](./skills/langgraph-error-handling/) | Retry strategies, LLM-based recovery loops, and human-in-the-loop escalation patterns. |
-| [langgraph-testing-evaluation](./skills/langgraph-testing-evaluation/) | Test and evaluate LangGraph agents using unit tests, trajectory evaluation, and LangSmith tools. |
+| [langgraph-testing-evaluation](./skills/langgraph-testing-evaluation/) | Test and evaluate LangGraph agents with unit/integration patterns, trajectory evaluation, LangSmith dataset evals, and A/B comparisons. |
 | [langsmith-trace-analyzer](./skills/langsmith-trace-analyzer/) | Fetch, organize, and analyze LangSmith traces for debugging and performance optimization. |
 | [langsmith-deployment](./skills/langsmith-deployment/) | Deploy, monitor, and manage LangGraph applications in production (Cloud, Hybrid, Standalone). |
 | [skill-creator](./skills/skill-creator/) | Guidance for creating and maintaining skills in this repo. |
@@ -25,7 +25,7 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 - 🤝 **Multi-Agent Patterns** - Supervisor, router, orchestrator, and handoff patterns
 - 💾 **State Management** - Schemas, reducers, persistence, and checkpointing
 - 🛡️ **Error Handling** - Retry policies, LLM recovery, and human-in-the-loop
-- ✅ **Testing & Evaluation** - Unit tests, trajectory evaluation, A/B testing
+- ✅ **Testing & Evaluation** - Unit/integration tests, trajectory evaluation, LangSmith evaluation, A/B testing
 - 🔍 **Trace Analysis** - Debug with LangSmith traces and pattern detection
 - 🌐 **Production Deployment** - Cloud, Hybrid, and Standalone deployment with monitoring
 

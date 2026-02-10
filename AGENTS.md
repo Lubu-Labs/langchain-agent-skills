@@ -159,7 +159,7 @@ Skills have dependencies. Implementation order (see `PLAN.md` for details):
 2. ✅ **langgraph-agent-patterns** - Multi-agent coordination patterns
 3. ✅ **langgraph-state-management** - State schemas, reducers, persistence
 4. ✅ **langgraph-error-handling** - Retry logic, recovery, escalation
-5. ✅ **langgraph-testing-evaluation** - Unit tests, trajectory eval, LangSmith evaluation
+5. ✅ **langgraph-testing-evaluation** - Unit/integration tests, trajectory eval, LangSmith evaluation, A/B comparison
 6. ✅ **langsmith-trace-analyzer** - Fetch and analyze LangSmith traces for debugging
 7. ✅ **langsmith-deployment** - Deploy agents to LangSmith Cloud, Hybrid, or Standalone
 8. 🚧 **langgraph-studio-debugging** (planned) - Debug with Studio and traces

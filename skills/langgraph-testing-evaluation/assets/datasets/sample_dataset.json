@@ -1,0 +1,73 @@
+{
+  "name": "Sample LangGraph Agent Evaluation Dataset",
+  "description": "Deterministic example dataset that can be loaded into LangSmith via create_examples/createExamples.",
+  "examples": [
+    {
+      "inputs": {
+        "question": "What is 2 + 2?"
+      },
+      "outputs": {
+        "answer": "4"
+      },
+      "metadata": {
+        "category": "math",
+        "difficulty": "easy",
+        "expected_tools": []
+      }
+    },
+    {
+      "inputs": {
+        "question": "Sort this list in ascending order: [5, 1, 3, 2, 4]"
+      },
+      "outputs": {
+        "answer": "[1, 2, 3, 4, 5]"
+      },
+      "metadata": {
+        "category": "reasoning",
+        "difficulty": "easy",
+        "expected_tools": []
+      }
+    },
+    {
+      "inputs": {
+        "question": "A search tool returned: \"Paris is the capital of France.\" Answer the user's question: What is the capital of France?"
+      },
+      "outputs": {
+        "answer": "Paris is the capital of France."
+      },
+      "metadata": {
+        "category": "tool_calling",
+        "difficulty": "easy",
+        "expected_tools": [
+          "search"
+        ]
+      }
+    },
+    {
+      "inputs": {
+        "question": "Write a Python function named factorial that returns n! recursively for non-negative integers."
+      },
+      "outputs": {
+        "answer": "def factorial(n: int) -> int:\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n in (0, 1):\n        return 1\n    return n * factorial(n - 1)"
+      },
+      "metadata": {
+        "category": "code_generation",
+        "difficulty": "medium",
+        "expected_tools": []
+      }
+    },
+    {
+      "inputs": {
+        "question": "Respond with a short, friendly greeting."
+      },
+      "outputs": {
+        "answer": "Hello! How can I help you today?"
+      },
+      "metadata": {
+        "category": "greeting",
+        "difficulty": "easy",
+        "expected_tools": []
+      }
+    }
+  ]
+}
