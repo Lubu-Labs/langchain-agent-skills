@@ -1,6 +1,6 @@
-# Agent Skills for LangChain, LangGraph & LangSmith
+# Agent Skills for LangChain, LangGraph, LangSmith & Deep Agents
 
-A comprehensive collection of agent-optimized skills for AI coding assistants working in the LangChain ecosystem. These skills cover the complete development lifecycle from project setup to production deployment, monitoring, and debugging.
+A comprehensive collection of agent-optimized skills for AI coding assistants working in the LangChain ecosystem. These skills cover the complete development lifecycle from project setup to production deployment, monitoring, debugging, and Deep Agents setup/configuration.
 
 Each skill is a self-contained package with a `SKILL.md` entry point plus optional scripts, references, and templates.
 
@@ -15,11 +15,12 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 | [langgraph-testing-evaluation](./skills/langgraph-testing-evaluation/) | Test and evaluate LangGraph agents with unit/integration patterns, trajectory evaluation, LangSmith dataset evals, and A/B comparisons. |
 | [langsmith-trace-analyzer](./skills/langsmith-trace-analyzer/) | Fetch, organize, and analyze LangSmith traces for debugging and performance optimization. |
 | [langsmith-deployment](./skills/langsmith-deployment/) | Deploy, monitor, and manage LangGraph applications in production (Cloud, Hybrid, Standalone). |
+| [deepagents-setup-configuration](./skills/deepagents-setup-configuration/) | Initialize, configure, and validate Deep Agents projects (Python/JavaScript), including middleware, backends, subagents, persistence, and migration guidance. |
 | [skill-creator](./skills/skill-creator/) | Guidance for creating and maintaining skills in this repo. |
 
 ## Coverage
 
-**7 production-ready skills** covering the complete LangGraph development lifecycle:
+**8 production-ready skills** covering the complete LangChain/LangGraph/Deep Agents development lifecycle:
 
 - 🚀 **Project Setup** - Initialize projects with proper structure and configuration
 - 🤝 **Multi-Agent Patterns** - Supervisor, router, orchestrator, and handoff patterns
@@ -28,6 +29,7 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 - ✅ **Testing & Evaluation** - Unit/integration tests, trajectory evaluation, LangSmith evaluation, A/B testing
 - 🔍 **Trace Analysis** - Debug with LangSmith traces and pattern detection
 - 🌐 **Production Deployment** - Cloud, Hybrid, and Standalone deployment with monitoring
+- 🧠 **Deep Agents Setup** - Initialize and configure Deep Agents with validated project scaffolding and compatibility guidance
 
 Plus the **skill-creator** meta-skill for extending this collection.
 
@@ -105,7 +107,7 @@ Read skills/langgraph-agent-patterns/SKILL.md for multi-agent patterns
 ```
 
 ## Repository Structure
-- `skills/` - 8 skill packages (7 production skills + skill-creator)
+- `skills/` - 9 skill packages (8 production skills + skill-creator)
 - `.claude-plugin/marketplace.json` - Marketplace manifest for Claude Code
 - Optional `*.skill` exports - Generated distribution artifacts
 - `PLAN.md` - Roadmap and implementation ordering notes

@@ -3,12 +3,13 @@
 `AGENTS.md` is the single source of truth for contributor and agent guidance in this repository. All workflow, tooling, and architecture rules live here. `CLAUDE.md` only points to this document.
 
 ## Project Overview
-This repository contains a collection of LangChain/LangGraph/LangSmith skills for AI coding assistants. Skills are modular, self-contained packages that extend an agent's capabilities with specialized knowledge, workflows, and tools for the LangChain ecosystem.
+This repository contains a collection of LangChain/LangGraph/LangSmith/Deep Agents skills for AI coding assistants. Skills are modular, self-contained packages that extend an agent's capabilities with specialized knowledge, workflows, and tools for the LangChain ecosystem.
 
 ## Repository Structure
 ```
 skills/
 ├── skill-creator/              # Meta-skill for creating new skills
+├── deepagents-setup-configuration/ # Skill for Deep Agents initialization, configuration, and validation
 ├── langgraph-project-setup/    # Skill for initializing LangGraph projects
 ├── langgraph-agent-patterns/   # Skill for multi-agent coordination patterns
 ├── langgraph-state-management/ # Skill for state schemas, reducers, persistence
@@ -16,7 +17,7 @@ skills/
 ├── langgraph-testing-evaluation/ # Skill for testing and evaluating agents
 ├── langsmith-trace-analyzer/   # Skill for fetching and analyzing LangSmith traces
 ├── langsmith-deployment/       # Skill for deploying agents to production
-└── [1 more skill planned]      # See PLAN.md for implementation roadmap
+└── [2 planned skills]
 
 Each skill follows this structure:
 skill-name/
@@ -162,9 +163,9 @@ Skills have dependencies. Implementation order (see `PLAN.md` for details):
 5. ✅ **langgraph-testing-evaluation** - Unit/integration tests, trajectory eval, LangSmith evaluation, A/B comparison
 6. ✅ **langsmith-trace-analyzer** - Fetch and analyze LangSmith traces for debugging
 7. ✅ **langsmith-deployment** - Deploy agents to LangSmith Cloud, Hybrid, or Standalone
-8. 🚧 **langgraph-studio-debugging** (planned) - Debug with Studio and traces
+8. ✅ **deepagents-setup-configuration** - Initialize, configure, validate, and troubleshoot Deep Agents projects
 
-**Note:** langsmith-trace-analyzer and langsmith-deployment were prioritized to complete the deployment and debugging workflow, as these are fundamental to production agent operations.
+**Note:** langsmith-trace-analyzer, langsmith-deployment, and deepagents-setup-configuration were prioritized to complete production deployment/debugging and Deep Agents setup workflows.
 
 ## Testing Strategy
 There is no centralized test suite. Use script validation as the primary check:
@@ -215,6 +216,7 @@ Skills in this repository target developers working with:
 - **LangChain**: Framework for building LLM applications
 - **LangGraph**: Low-level orchestration framework for stateful agents
 - **LangSmith**: Managed hosting platform for deployment and monitoring
+- **Deep Agents**: Agent harness for planning, filesystem context management, and subagent delegation
 
 Focus on LangChain-specific knowledge that the agent doesn't have natively, such as:
 - langgraph.json schema and configuration
@@ -226,4 +228,5 @@ Focus on LangChain-specific knowledge that the agent doesn't have natively, such
 - Deployment to production (Cloud, Hybrid, Standalone infrastructure)
 - Monitoring, alerts, and production operations
 - CI/CD integration and deployment automation
+- Deep Agents setup and configuration (create_deep_agent/createDeepAgent, middleware, backends, HITL, migration)
 - LangGraph Studio setup and debugging

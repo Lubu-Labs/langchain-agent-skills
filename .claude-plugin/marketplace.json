@@ -33,6 +33,16 @@
         "./skills/langsmith-trace-analyzer",
         "./skills/langsmith-deployment"
       ]
+    },
+    {
+      "name": "deepagents-skills",
+      "description": "Collection of Deep Agents skills for complex long-horizon agents with built-in planning, context management, and task delegation",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/skill-creator",
+        "./skills/deepagents-setup-configuration"
+      ]
     }
   ]
 }
