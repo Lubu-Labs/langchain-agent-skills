@@ -1,0 +1,28 @@
+{
+  "task": "Implement User Authentication Feature",
+  "description": "Example todo structure for coding tasks following the design → implement → test pattern",
+  "todos": [
+    {
+      "content": "Design authentication flow and API endpoints (login, logout, refresh)",
+      "status": "pending"
+    },
+    {
+      "content": "Implement JWT-based authentication with token generation and validation",
+      "status": "pending"
+    },
+    {
+      "content": "Write unit tests for authentication logic and edge cases",
+      "status": "pending"
+    },
+    {
+      "content": "Test end-to-end authentication workflow with integration tests",
+      "status": "pending"
+    }
+  ],
+  "best_practices": [
+    "Design before implementing to catch issues early",
+    "Include testing as explicit todo (not afterthought)",
+    "Make completion criteria clear and measurable",
+    "Update status to 'in_progress' when starting, 'completed' when done"
+  ]
+}

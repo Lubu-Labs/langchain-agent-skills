@@ -7,7 +7,7 @@
   },
   "metadata": {
     "description": "Agent-optimized LangChain, LangGraph and LangSmith skills for AI coding assistants by Lubu Labs",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -41,7 +41,8 @@
       "strict": false,
       "skills": [
         "./skills/skill-creator",
-        "./skills/deepagents-setup-configuration"
+        "./skills/deepagents-setup-configuration",
+        "./skills/deepagents-planning-todos"
       ]
     }
   ]

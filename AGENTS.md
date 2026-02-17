@@ -10,6 +10,7 @@ This repository contains a collection of LangChain/LangGraph/LangSmith/Deep Agen
 skills/
 ├── skill-creator/              # Meta-skill for creating new skills
 ├── deepagents-setup-configuration/ # Skill for Deep Agents initialization, configuration, and validation
+├── deepagents-planning-todos/  # Skill for task planning and decomposition with write_todos
 ├── langgraph-project-setup/    # Skill for initializing LangGraph projects
 ├── langgraph-agent-patterns/   # Skill for multi-agent coordination patterns
 ├── langgraph-state-management/ # Skill for state schemas, reducers, persistence
@@ -17,7 +18,7 @@ skills/
 ├── langgraph-testing-evaluation/ # Skill for testing and evaluating agents
 ├── langsmith-trace-analyzer/   # Skill for fetching and analyzing LangSmith traces
 ├── langsmith-deployment/       # Skill for deploying agents to production
-└── [2 planned skills]
+└── [1 planned skill]
 
 Each skill follows this structure:
 skill-name/
@@ -145,6 +146,12 @@ All skills must support both Python and JavaScript/TypeScript:
 - INSTALLATION_GUIDE.md or similar auxiliary documentation
 - Generic development practice files
 
+## Open Source Safety
+- Never commit real secrets (`.env`, API keys, tokens, credentials) in any skill file.
+- Keep runtime/build artifacts out of source (`__pycache__/`, `*.pyc`, `*.pyo`, local temp outputs).
+- Treat LangSmith trace exports as potentially sensitive; only commit sanitized examples.
+- Before opening a PR/release, verify tracked files with `git ls-files skills/<skill-name>/` and confirm only source assets are included.
+
 ## SKILL.md Constraints
 - **Line limit**: Keep under 500 lines
 - **Description field**: Must comprehensively describe when to trigger the skill (primary triggering mechanism)
@@ -164,6 +171,7 @@ Skills have dependencies. Implementation order (see `PLAN.md` for details):
 6. ✅ **langsmith-trace-analyzer** - Fetch and analyze LangSmith traces for debugging
 7. ✅ **langsmith-deployment** - Deploy agents to LangSmith Cloud, Hybrid, or Standalone
 8. ✅ **deepagents-setup-configuration** - Initialize, configure, validate, and troubleshoot Deep Agents projects
+9. ✅ **deepagents-planning-todos** - Master write_todos for task planning and decomposition
 
 **Note:** langsmith-trace-analyzer, langsmith-deployment, and deepagents-setup-configuration were prioritized to complete production deployment/debugging and Deep Agents setup workflows.
 
@@ -229,4 +237,5 @@ Focus on LangChain-specific knowledge that the agent doesn't have natively, such
 - Monitoring, alerts, and production operations
 - CI/CD integration and deployment automation
 - Deep Agents setup and configuration (create_deep_agent/createDeepAgent, middleware, backends, HITL, migration)
+- Deep Agents planning and todos (write_todos tool, task decomposition patterns, status lifecycle, trace visualization)
 - LangGraph Studio setup and debugging

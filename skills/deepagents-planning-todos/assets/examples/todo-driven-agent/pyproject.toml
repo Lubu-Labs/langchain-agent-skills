@@ -1,0 +1,15 @@
+[project]
+name = "todo-driven-agent"
+version = "0.1.0"
+description = "Example Deep Agent demonstrating write_todos workflow"
+requires-python = ">=3.11"
+dependencies = [
+    "deepagents>=0.4.0",
+    "langchain>=1.0.0",
+    "langchain-anthropic",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

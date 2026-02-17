@@ -16,11 +16,12 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 | [langsmith-trace-analyzer](./skills/langsmith-trace-analyzer/) | Fetch, organize, and analyze LangSmith traces for debugging and performance optimization. |
 | [langsmith-deployment](./skills/langsmith-deployment/) | Deploy, monitor, and manage LangGraph applications in production (Cloud, Hybrid, Standalone). |
 | [deepagents-setup-configuration](./skills/deepagents-setup-configuration/) | Initialize, configure, and validate Deep Agents projects (Python/JavaScript), including middleware, backends, subagents, persistence, and migration guidance. |
+| [deepagents-planning-todos](./skills/deepagents-planning-todos/) | Master the `write_todos` tool for task planning and decomposition in Deep Agents, with patterns for research, coding, analysis tasks, and trace visualization. |
 | [skill-creator](./skills/skill-creator/) | Guidance for creating and maintaining skills in this repo. |
 
 ## Coverage
 
-**8 production-ready skills** covering the complete LangChain/LangGraph/Deep Agents development lifecycle:
+**9 production-ready skills** covering the complete LangChain/LangGraph/Deep Agents development lifecycle:
 
 - 🚀 **Project Setup** - Initialize projects with proper structure and configuration
 - 🤝 **Multi-Agent Patterns** - Supervisor, router, orchestrator, and handoff patterns
@@ -30,6 +31,7 @@ Each skill is a self-contained package with a `SKILL.md` entry point plus option
 - 🔍 **Trace Analysis** - Debug with LangSmith traces and pattern detection
 - 🌐 **Production Deployment** - Cloud, Hybrid, and Standalone deployment with monitoring
 - 🧠 **Deep Agents Setup** - Initialize and configure Deep Agents with validated project scaffolding and compatibility guidance
+- 📝 **Deep Agents Planning** - Master write_todos for effective task decomposition with patterns, best practices, and trace visualization
 
 Plus the **skill-creator** meta-skill for extending this collection.
 
@@ -107,7 +109,7 @@ Read skills/langgraph-agent-patterns/SKILL.md for multi-agent patterns
 ```
 
 ## Repository Structure
-- `skills/` - 9 skill packages (8 production skills + skill-creator)
+- `skills/` - 10 skill packages (9 production skills + skill-creator)
 - `.claude-plugin/marketplace.json` - Marketplace manifest for Claude Code
 - Optional `*.skill` exports - Generated distribution artifacts
 - `PLAN.md` - Roadmap and implementation ordering notes

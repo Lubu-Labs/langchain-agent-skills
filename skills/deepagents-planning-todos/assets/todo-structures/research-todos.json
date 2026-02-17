@@ -1,0 +1,28 @@
+{
+  "task": "Research Deep Agents Planning Patterns",
+  "description": "Example todo structure for research tasks following the gather → synthesize → report pattern",
+  "todos": [
+    {
+      "content": "Search LangChain documentation for Deep Agents overview",
+      "status": "pending"
+    },
+    {
+      "content": "Review Deep Agents planning capabilities for write_todos and status transitions",
+      "status": "pending"
+    },
+    {
+      "content": "Review create_deep_agent customization guidance for built-in middleware behavior",
+      "status": "pending"
+    },
+    {
+      "content": "Synthesize findings into comprehensive summary document",
+      "status": "pending"
+    }
+  ],
+  "best_practices": [
+    "Keep to 3-6 items for clear progress tracking",
+    "Make content specific and actionable",
+    "Start all with 'pending' status",
+    "Ask user approval before starting execution"
+  ]
+}
